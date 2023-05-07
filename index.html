@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Encriptador de Texto</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="section-logo">
+            <img src="images/Logo.png" alt="Imagen del logo de Alura">
+        </section>
+
+        <section class="section-encriptador">
+            <textarea id="txt-receptor" placeholder="Ingrese el texto aqui"></textarea>
+            <span id="spanError">solo letras minúsculas y sin acentos</span>
+            <div class="container-botones">
+                <button class="btn-encriptar" id="btn-encriptar">Encriptar</button>
+                <button class="btn-desencriptar" id="btn-desencriptar">Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="section-traductor">
+            <div class="container-traductor" id="container-traductor">
+                <img class="img-persona" src="images/Persona.png" alt="Imagen de una persona con una lupa">
+                <p class="parrafo-mensaje">Ningún mensaje fue encontrado</p>
+                <p class="parrafo-descripcionmensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <div class="container-traductortexto" id="container-traductortexto">
+                <textarea readonly id="txt-traductor"></textarea>
+                <button class="btn-copiar" id="btn-copiar">Copiar</button>
+            </div>
+        </section>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

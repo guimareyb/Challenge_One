@@ -1,0 +1,258 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background: #E5E5E5;
+    font-family: 'Inter';
+}
+
+.container {
+    display: flex;
+    height: calc(100% - 40px*2);
+    padding: 40px;
+}
+
+/*======== SECCION LOGO ========*/
+
+.section-logo {
+    width: 120px;
+    height: 100%;
+}
+
+/*======== SECCION ENCRIPTADOR ========*/
+
+.section-encriptador {
+    width: 70%;
+    margin: 32px 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-encriptador textarea {
+    height: 100%;
+    background: none;
+    border: none;
+    overflow: auto;
+    outline: none;
+    text-align: start;
+    resize: none;
+
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+}
+
+.section-encriptador textarea::placeholder {
+    color: #0A3871;
+}
+
+.section-encriptador span {
+    display: flex;
+    margin: 16px 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.section-encriptador span::before {
+    content: url("../images/Vector.svg");
+    margin-right: 8px;
+}
+
+.container-botones {
+    display: flex;
+    width: 100%;
+}
+
+.btn-encriptar {
+    background: #0A3871;
+    height: 3.5em;
+    width: calc(50% - 12px);
+    padding: 1em;
+    border: none;
+    border-radius: 1em;
+
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.btn-encriptar:hover {
+    background: #265792;
+}
+
+.btn-desencriptar {
+    background: #D8DFE8;
+    height: 3.5em;
+    width: calc(50% - 12px);
+    padding: 1em;
+    margin-left: 24px;
+    border: 1px solid #0A3871;
+    border-radius: 1em;
+
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.btn-desencriptar:hover {
+    background: #b1bdcc;
+}
+
+/*======== SECCION TRADUCTOR ========*/
+
+.section-traductor {
+    width: 30%;
+    height: calc(100% - 32px*2);
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    padding: 32px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.container-traductor {
+    width: 100%;
+}
+
+.parrafo-mensaje {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #343A40;
+    margin: 16px 0;
+}
+
+.parrafo-descripcionmensaje {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+}
+
+.img-persona {
+    width: 100%;
+    margin: 16px 0;
+}
+
+.container-traductortexto {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.container-traductortexto textarea {
+    height: 100%;
+    background: none;
+    border: none;
+    overflow: auto;
+    outline: none;
+    text-align: start;
+    resize: none;
+
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 150%;
+    color: #495057;
+
+}
+
+.btn-copiar {
+    background: none;
+    height: 3.5em;
+    width: 100%;
+    margin-top: 32px;
+    padding: 1em;
+    border: 1px solid #0A3871;
+    border-radius: 1em;
+
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.animate-error {
+    animation: horizontal-shaking 0.35s 2.5;
+}
+
+@keyframes horizontal-shaking {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(10px)
+    }
+
+    50% {
+        transform: translateX(-10px)
+    }
+
+    75% {
+        transform: translateX(10px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+.btn-copiar:hover {
+    background: #e0dbdb
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .section-logo {
+        height: 10%;
+    }
+
+    .section-encriptador {
+        height: 70%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .section-traductor {
+        margin-top: 3em;
+        height: 20%;
+        width: calc(100% - 32px*2);
+    }
+
+    .img-persona {
+        display: none;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .container-botones {
+        flex-direction: column;
+    }
+
+    .btn-encriptar {
+        width: 100%;
+    }
+
+    .btn-desencriptar {
+        margin: 1em 0;
+        width: 100%;
+    }
+
+    .section-traductor {
+        margin-top: 1em;
+    }
+}
